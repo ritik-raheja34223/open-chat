@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenChat - Public Anonymous Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <span class="logo-icon">✨</span>
+                <h1>OpenChat</h1>
+            </div>
+            <div class="status-bar">
+                <span id="active-users">0 Online</span>
+            </div>
+        </header>
+
+        <main id="chat-window">
+            <div class="welcome-message">
+                <h2>Welcome to the Void</h2>
+                <p>You are chatting as <span id="my-username" class="highlight">...</span></p>
+                <p class="subtext">Messages are transient. Say hello!</p>
+            </div>
+            <div id="messages-container">
+                <!-- Messages will appear here -->
+            </div>
+        </main>
+
+        <footer>
+            <form id="chat-form">
+                <input type="text" id="msg-input" placeholder="Type your message..." autocomplete="off">
+                <button type="submit">
+                    Send
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
